@@ -122,10 +122,25 @@ int main()
    std::cout << "appended-to DoubleVector:" << std::endl;
    std::cout << "-------------------------" << std::endl;
 
+   std::cout << "append integer vector:" << std::endl;
    dv2.appendIntegerVector(iv);
+   std::cout << "Size: " << dv2.size() << " [3]" << std::endl;
+   std::cout << "Values: ";
+   for (int i = 0; i < dv2.size(); i++)
+   {
+      std::cout << dv2.get(i) << " : ";
+   }
+   std::cout << std::endl;
+
+   std::cout << "append char vector:" << std::endl;
    dv2.appendCharacterVector(cv);
-   std::cout << "Size: " << dv2.size() << " [2]" << std::endl;
-   std::cout << "Values: " << dv2.get(0) << ":" << iv2.get(6) << " [:]" << std::endl;
+   std::cout << "Size: " << dv2.size() << " [3]" << std::endl;
+   std::cout << "Values: ";
+   for (int i = 0; i < dv2.size(); i++)
+   {
+      std::cout << dv2.get(i) << " : ";
+   }
+   std::cout << std::endl;
 
    std::cout << "--------------------------" << std::endl;
 
