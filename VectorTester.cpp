@@ -9,6 +9,11 @@ int main()
    DoubleVector    dv;
    CharacterVector cv;
 
+   for(int i = 0; i < 5; i++)
+   {
+      dv.put(i+3.2);
+   }
+
    //-------------------------------------------------------------------------
 
    // test IntegerVector: put, get, size, out_of_range
@@ -34,6 +39,50 @@ int main()
    std::cout << "-------------" << std::endl;
    std::cout << "DoubleVector:" << std::endl;
    std::cout << "-------------" << std::endl;
+
+   std::cout << "Original DoubleVector:" << std::endl;
+   for (int i = 0; i < dv.size(); i++)
+   {
+      std::cout << dv.get(i) << std:: endl;
+   }
+
+   std::cout << "Put 1.0 in index 1:" << std::endl;
+   dv.put(1.0, 1);
+   for (int i = 0; i < dv.size(); i++)
+   {
+      std::cout << dv.get(i) << std:: endl;
+   }
+
+
+   std::cout << "Put 3.0 the end:" << std::endl;
+   dv.put(3.0);
+
+   for (int i = 0; i < dv.size(); i++)
+   {
+      std::cout << dv.get(i) << std:: endl;
+   }
+
+   std::cout << "Get method:" << std::endl;
+   std::cout << dv.get(2) << std::endl;
+
+   std::cout << "Size method:" << std::endl;
+   std::cout << dv.size() << std::endl;
+
+   std::cout << "When index is out_of_range" << std::endl;
+
+   try{
+      dv.put(2.0, 100);
+   } catch(const std::exception& e) {
+      std::cout << "Exception caught:" << e.what() << std::endl;
+   }
+
+   try{
+      dv.put(2.0, -1);
+   } catch(const std::exception& e) {
+      std::cout << "Exception caught:" << e.what() << std::endl;
+   }
+
+
 
    //-------------------------------------------------------------------------
 
