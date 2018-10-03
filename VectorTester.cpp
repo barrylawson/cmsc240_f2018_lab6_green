@@ -133,7 +133,11 @@ int main()
    iv2.appendDoubleVector(dv);
    iv2.appendCharacterVector(cv);
    std::cout << "Size: " << iv2.size() << " [2]" << std::endl;
-   std::cout << "Values: " << iv2.get(0) << ":" << iv2.get(6) << " [:]" << std::endl;
+   std::cout << "Values: " << std::endl;
+   for (int i = 0; i < iv2.size(); i++)
+   {
+      std::cout << iv2.get(i) << " : ";
+   }
 
    std::cout << "--------------------------" << std::endl;
 
