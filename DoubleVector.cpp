@@ -11,7 +11,7 @@ DoubleVector::~DoubleVector() {}
 int DoubleVector::size() 
 {
 
-   return size();
+   return doubleVector.size();
 
 }
 
@@ -20,7 +20,7 @@ int DoubleVector::size()
 double DoubleVector::get(int index) 
 { 
 
-	double element = doubleVector[index];
+   double element = doubleVector.at(index);
    return element;
 
 }
@@ -29,7 +29,7 @@ double DoubleVector::get(int index)
 // otherwise, use push_back to append to the end of the vector
 void DoubleVector::put(double value, int index)
 {
-	if (index > 0 && index < size()){
+	if (index >= 0 && index < size()){
 		doubleVector.at(index) = value;
 	} else {
 		doubleVector.push_back(value);
