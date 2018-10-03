@@ -20,6 +20,26 @@ int main()
 
    std::cout << "--------------" << std::endl;
    std::cout << "IntegerVector:" << std::endl;
+
+   iv.put(118);
+   std::cout << "Size: " << iv.size() << " [1]" << std::endl;
+   std::cout << "Value: " << iv.get(0) << " [118]" << std::endl;
+   try
+   {
+      std::cout << iv.get(1) << std::endl;
+   }
+   catch (std::exception& e)
+   {
+      std::cerr << "Exception Caught: " << e.what() << std::endl;
+   }
+
+   iv.put(105);
+   iv.put(33, 0);
+   iv.put(118);
+   std::cout << "Size: " << iv.size() << " [3]" << std::endl;
+   std::cout << "Values: " << iv.get(0) << ":" << iv.get(1) << ":" << iv.get(2) << 
+   " [33:105:118]" << std::endl;
+
    std::cout << "--------------" << std::endl;
 
    //-------------------------------------------------------------------------
@@ -92,6 +112,12 @@ int main()
    std::cout << std::endl;
    std::cout << "--------------------------" << std::endl;
    std::cout << "appended-to IntegerVector:" << std::endl;
+
+   iv2.appendDoubleVector(dv);
+   iv2.appendCharacterVector(cv);
+   std::cout << "Size: " << iv2.size() << " [2]" << std::endl;
+   std::cout << "Values: " << iv2.get(0) << ":" << iv2.get(6) << " [:]" << std::endl;
+
    std::cout << "--------------------------" << std::endl;
 
    //-------------------------------------------------------------------------

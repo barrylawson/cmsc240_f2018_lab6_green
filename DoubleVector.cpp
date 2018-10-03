@@ -10,15 +10,19 @@ DoubleVector::~DoubleVector() {}
 
 int DoubleVector::size() 
 {
+
    return size();
+
 }
 
 // just return the double at the specified index; use the at() method rather
 // than [] so that an out_of_range error will be thrown for an invalid index
 double DoubleVector::get(int index) 
 { 
+
 	double element = doubleVector[index];
    return element;
+
 }
 
 // if index is size-legitimate, put the value at that index;

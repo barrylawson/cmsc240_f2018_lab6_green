@@ -17,7 +17,9 @@ int CharacterVector::size()
 // than [] so that an out_of_range error will be thrown for an invalid index
 char CharacterVector::get(int index) 
 { 
-   return ('\0');
+
+   return 0;
+
 }
 
 // if index is size-legitimate, put the value at that index;
