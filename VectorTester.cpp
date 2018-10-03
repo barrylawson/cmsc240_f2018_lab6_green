@@ -80,46 +80,6 @@ int main()
    std::cout << "--------------" << std::endl;
 
 
-   /*for(int i = 0; i < 5; i++)
-   {
-      dv.put(i+3.2);
-   }
-
-
-   std::cout << "Original DoubleVector (tests get method):" << std::endl;
-   for (int i = 0; i < 5; i++)
-   {
-      std::cout << dv.get(i) << std:: endl;
-   }
-
-   std::cout << "Put 1.0 in index 1 and print index 1:" << std::endl;
-   dv.put(1.0, 1);
-   std::cout << dv.get(1) << " [1.0]" << std:: endl;
-
-   std::cout << "Put 3.0 the end:" << std::endl;
-   dv.put(3.0);
-   std::cout << dv.get(6) << std:: endl;
-
-
-   std::cout << "Size method:" << std::endl;
-   std::cout << dv.size() << "[6]" <<std::endl;
-
-   std::cout << "When index is out_of_range" << std::endl;
-
-   try{
-      dv.put(2.0, 100);
-   } catch(const std::exception& e) {
-      std::cout << "Exception caught:" << e.what() << std::endl;
-   }
-
-   try{
-      dv.put(2.0, -1);
-   } catch(const std::exception& e) {
-      std::cout << "Exception caught:" << e.what() << std::endl;
-   }
-   */
-
-
 
    //-------------------------------------------------------------------------
 
@@ -156,6 +116,13 @@ int main()
    std::cout << "-------------------------" << std::endl;
    std::cout << "appended-to DoubleVector:" << std::endl;
    std::cout << "-------------------------" << std::endl;
+
+   dv2.appendIntegerVector(iv);
+   dv2.appendCharacterVector(cv);
+   std::cout << "Size: " << dv2.size() << " [2]" << std::endl;
+   std::cout << "Values: " << dv2.get(0) << ":" << iv2.get(6) << " [:]" << std::endl;
+
+   std::cout << "--------------------------" << std::endl;
 
    //-------------------------------------------------------------------------
 
