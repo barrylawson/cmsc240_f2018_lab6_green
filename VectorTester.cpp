@@ -17,6 +17,7 @@ int main()
 
    std::cout << "--------------" << std::endl;
    std::cout << "IntegerVector:" << std::endl;
+   std::cout << "--------------" << std::endl;   
 
    iv.put(118);
    std::cout << "Size: " << iv.size() << " [1]" << std::endl;
@@ -89,8 +90,19 @@ int main()
    std::cout << std::endl;
    std::cout << "--------------------------" << std::endl;
    std::cout << "appended-to IntegerVector:" << std::endl;
+   std::cout << "--------------------------" << std::endl;
 
+   std::cout << "append double vector: " << std::endl;
    iv2.appendDoubleVector(dv);
+   std::cout << "Size: " << iv2.size() << std::endl;
+   std::cout << "Values: ";
+   for (int i = 0; i < iv2.size(); i++)
+   {
+      std::cout << iv2.get(i) << " : ";
+   }
+   std::cout << std::endl;
+
+   std::cout << "append char vector: " << std::endl;
    iv2.appendCharacterVector(cv);
    std::cout << "Size: " << iv2.size() << std::endl;
    std::cout << "Values: ";
