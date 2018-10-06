@@ -44,19 +44,32 @@ int main()
 
    // test CharacterVector: put, get, size, out_of_range
 
-   cv.put('h');
-
    std::cout << std::endl;
    std::cout << "----------------" << std::endl;
    std::cout << "CharacterVector:" << std::endl;
-   std::cout << cv.size() << std::endl;
-   std::cout << cv.get(0) << std::endl;
-
-   cv.put('r', 1);
-
-   std::cout << cv.size() << std::endl;
-   std::cout << cv.get(1) << std::endl;
    std::cout << "----------------" << std::endl;
+
+
+   cv.put('h');
+   std::cout << "Size: " << cv.size() << " [1]" << std::endl;
+   std::cout << "Character: " << cv.get(0) << " [h]" << std::endl;
+   try
+   {
+      std::cout << cv.get(1) << std::endl;
+   }
+   catch (std::exception& e)
+   {
+      std::cerr << "Exception Caught: " << e.what() << std::endl;
+   }
+
+   cv.put('i');
+   cv.put('g', 0);
+   cv.put('t');
+   std::cout << "Size: " << cv.size() << " [3]" << std::endl;
+   std::cout << "Values: " << cv.get(0) << ":" << cv.get(1) << ":" << cv.get(2) << 
+   " [g:i:t]" << std::endl;
+
+   std::cout << "--------------" << std::endl;
 
    //-------------------------------------------------------------------------
 
@@ -132,6 +145,29 @@ int main()
    std::cout << "----------------------------" << std::endl;
    std::cout << "appended-to CharacterVector:" << std::endl;
    std::cout << "----------------------------" << std::endl;
+
+   std::cout << "append Integer Vector: " << std::endl;
+   cv2.appendIntegerVector(iv);
+   std::cout << "Size: " << cv2.size() << " [3]" << std::endl;
+   std::cout << "Values: "<< std::endl;
+   for (int i = 0; i < cv2.size(); i++) 
+   {
+      std::cout << cv2.get(i) << " : ";
+   }
+   std::cout << std::endl;
+
+   std::cout << "append Double Vector: " << std::endl;
+   cv2.appendDoubleVector(dv);
+   std::cout << "Size: " << cv2.size() << " [6]" << std::endl;
+   std::cout << "Values: ";
+   for (int i = 0; i < cv2.size(); i++)
+   {
+      std::cout << cv2.get(i) << " : ";
+   }
+   std::cout << std::endl;
+
+   std::cout << "--------------------------" << std::endl;
+
 
    //-------------------------------------------------------------------------
 
