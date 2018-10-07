@@ -116,7 +116,7 @@ int main()
 
    std::cout << "append double vector: " << std::endl;
    iv2.appendDoubleVector(dv);
-   std::cout << "Size: " << iv2.size() << std::endl;
+   std::cout << "Size: " << iv2.size() << " [3]" << std::endl;
    std::cout << "Values: ";
    for (int i = 0; i < iv2.size(); i++)
    {
@@ -126,7 +126,7 @@ int main()
 
    std::cout << "append char vector: " << std::endl;
    iv2.appendCharacterVector(cv);
-   std::cout << "Size: " << iv2.size() << std::endl;
+   std::cout << "Size: " << iv2.size() << " [6]" << std::endl;
    std::cout << "Values: ";
    for (int i = 0; i < iv2.size(); i++)
    {
@@ -191,7 +191,7 @@ int main()
 
    std::cout << "append char vector:" << std::endl;
    dv2.appendCharacterVector(cv);
-   std::cout << "Size: " << dv2.size() << " [3]" << std::endl;
+   std::cout << "Size: " << dv2.size() << " [6]" << std::endl;
    std::cout << "Values: ";
    for (int i = 0; i < dv2.size(); i++)
    {
